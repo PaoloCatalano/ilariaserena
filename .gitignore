@@ -18,7 +18,7 @@ lib-cov
 coverage
 
 # nyc test coverage
-.nyc_output
+.nyc_outputnpm install --save gatsby-source-contentful
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
