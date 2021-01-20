@@ -6,18 +6,19 @@ const Newsletters = ({en}) => {
     
   return (
     <div>
-        <div className='newletter-title'>
-      <RiMailSendLine className="icon" />
-      <label htmlFor="email-address">
-        {en ? "Subscribe to my Newsletter" : "Iscriviti alla mia Newsletter"}
-      </label>
-        </div>
+      <div className="newletter-title">
+        <RiMailSendLine className="icon" />
+        <label htmlFor="email-address">
+          {en ? "Subscribe to my Newsletter" : "Iscriviti alla mia Newsletter"}
+        </label>
+      </div>
       <form
         id="fs-frm"
         name="simple-contact-form"
         acceptCharset="utf-8"
         action="https://formspree.io/f/mbjpwgrz"
         method="post"
+        data-netlify="true"
       >
         <fieldset id="fs-frm-inputs">
           <input
