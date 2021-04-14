@@ -3,26 +3,26 @@ import Layout from "../../components/Layout"
 import SEO from "../../components/Seo"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-
+import sitemap from "../../constant/sitemap"
 
 const Storia = () => {
-     const allPics = useStaticQuery(graphql`
-       {
-         pics: allContentfulPictures(
-           sort: { fields: picture___title, order: ASC }
-         ) {
-           nodes {
-             picture {
-               fluid {
-                 ...GatsbyContentfulFluid_noBase64
-               }
-             }
-           }
-         }
-       }
-     `)
-     const position = 3
-  const title = "My personal story"
+  const allPics = useStaticQuery(graphql`
+    {
+      pics: allContentfulPictures(
+        sort: { fields: picture___title, order: ASC }
+      ) {
+        nodes {
+          picture {
+            fluid {
+              ...GatsbyContentfulFluid_noBase64
+            }
+          }
+        }
+      }
+    }
+  `)
+  const position = sitemap.crescita
+  const title = "Growth"
   return (
     <>
       <SEO

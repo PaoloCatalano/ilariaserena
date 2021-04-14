@@ -1,75 +1,94 @@
 import React from "react"
 import { Link } from "gatsby"
-import flag from '../assets/us.png'
-import { linksEn } from "../constant/links-en"
+// import { linksEn } from "../constant/links-en"
 
-
-export const links = [
+export const linksIt = [
   {
-    id: 1,
     text: "home",
     url: "/",
   },
   {
-    id: 2,
-    text: "che cosa è thetaHealing",
+    text: "thetaHealing",
     url: "/che-cosa-è-thetaHealing/",
   },
   {
-    id: 3,
-    text: "come funziona una seduta",
-    url: "/come-funziona-una-seduta/",
+    text: "crescita",
+    url: "/crescita-evoluzione/",
   },
   {
-    id: 4,
-    text: "la mia storia",
-    url: "/la-mia-storia/",
-  },
-  {
-    id: 5,
-    text: "La Terapia del Diapason",
+    text: "suonoterapia",
     url: "/la-terapia-del-diapason/",
   },
   {
-    id: 6,
     text: "prezzi",
     url: "/prezzi/",
   },
+]
+export const linksEn = [
   {
-    id: 7,
-    text: "calendario disponibilità",
-    url: "/calendario-disponibilità/",
+    text: "home",
+    url: "/en/home/",
+  },
+  {
+    text: "ThetaHealing",
+    url: "/en/what-is-thetahealing/",
+  },
+  {
+    text: "growth",
+    url: "/en/growth-evolution/",
+  },
+  {
+    text: "soundtherapy",
+    url: "/en/tuning-fork-sound-therapy/",
+  },
+  {
+    text: "prices",
+    url: "/en/prices/",
   },
 ]
-//mappare ogni elemnto dell'array links
-const tempLinks = links.map(link => {
-  return (
-    <li key={link.id}>
-      <Link
-        to={link.url}
-        activeStyle={{ color: "#efc46d", fontWeight: "bold" }}
-      >
-        {link.text}
-      </Link>
-    </li>
-  )
-})
 
-export default ({position}) => {
-  return (
-    <ul className="links">
-      {tempLinks}
-      <li>
-        <Link to={linksEn[position].url} style={{ display: "inline-flex" }}>
-          <img
-            src={flag}
-            alt="english flag"
-            style={{ width: 31, height: 16.3, margin: "1px 10px 5px 0" }}
-          />
-          english
+//mappare ogni elemnto dell'array links
+
+export default ({ position, link, en }) => {
+  const [translation, settranslation] = React.useState("/404/")
+  const [links, setlinks] = React.useState(linksIt)
+
+  React.useEffect(() => {
+    if (link) {
+      settranslation(link)
+    }
+
+    if (position || position === 0) {
+      settranslation(linksEn[position].url)
+    }
+    if ((position || position === 0) && en) {
+      settranslation(linksIt[position].url)
+    }
+    if (en) {
+      setlinks(linksEn)
+    }
+  }, [link, position, en])
+
+  //navbar
+  const tempLinks = links.map((link, index) => {
+    return (
+      <li key={index}>
+        <Link to={link.url} activeStyle={{ color: "#a88b13" }}>
+          {link.text}
         </Link>
       </li>
-    </ul>
+    )
+  })
+
+  //navbar + bottone lingua
+  return (
+    <>
+      <ul className="links">{tempLinks}</ul>
+      <div className="underline"></div>
+
+      <Link to={translation} className="center-grid center-text upper">
+        {!en ? "en" : "it"}
+      </Link>
+    </>
   )
 }
-

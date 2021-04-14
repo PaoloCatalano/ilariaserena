@@ -1,11 +1,8 @@
 import React, { useState, useRef, useEffect } from "react"
 import { ImMenu4 } from "react-icons/im"
-import LinkList from '../constant/links'
-import LinkListEn from '../constant/links-en'
+import LinkList from "../constant/links"
 
-
-const Navbar = ({en, position}) => {
-
+const Navbar = ({ en, position, link }) => {
   const [showLinks, setShowLinks] = useState(false)
   const linksContainerRef = useRef(null)
   const linksRef = useRef(null)
@@ -14,7 +11,6 @@ const Navbar = ({en, position}) => {
     setShowLinks(!showLinks)
   }
 
-  
   useEffect(() => {
     const linksHeight = linksRef.current.getBoundingClientRect().height
 
@@ -30,7 +26,13 @@ const Navbar = ({en, position}) => {
       <div className="nav-center">
         <div className="nav-header">
           <div
+            aria-label="navbar"
+            role="button"
+            tabIndex="0"
             onClick={() => {
+              setShowLinks(false)
+            }}
+            onKeyDown={() => {
               setShowLinks(false)
             }}
           ></div>
@@ -40,16 +42,11 @@ const Navbar = ({en, position}) => {
           </button>
         </div>
         <div className="links-container" ref={linksContainerRef}>
-          <div
-            ref={linksRef}
-            onClick={() => {
-              setShowLinks(false)
-            }}
-          >
+          <div ref={linksRef}>
             {en ? (
-              <LinkListEn position={position} />
+              <LinkList position={position} link={link} en />
             ) : (
-              <LinkList position={position} />
+              <LinkList position={position} link={link} />
             )}
           </div>
         </div>
