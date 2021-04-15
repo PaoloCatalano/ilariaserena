@@ -12,7 +12,7 @@ export const linksIt = [
     url: "/che-cosa-è-thetaHealing/",
   },
   {
-    text: "crescita",
+    text: "dixcorso",
     url: "/crescita-evoluzione/",
   },
   {
@@ -34,7 +34,7 @@ export const linksEn = [
     url: "/en/what-is-thetahealing/",
   },
   {
-    text: "growth",
+    text: "dixcorso",
     url: "/en/growth-evolution/",
   },
   {

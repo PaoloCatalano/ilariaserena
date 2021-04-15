@@ -4,7 +4,6 @@ const Header = ({ title, subtitle }) => {
   const titolo = "Ilaria Serena"
   const titleRef = useRef(null)
   useEffect(() => {
-    console.log(titleRef.current.classList)
     setTimeout(() => {
       titleRef.current.classList.add("effect")
     }, 100)

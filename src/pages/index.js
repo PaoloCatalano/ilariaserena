@@ -4,6 +4,7 @@ import Symbol from "../components/Symbol"
 import Img from "gatsby-image"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import SEO from "../components/Seo"
+import News from "../components/News"
 import sitemap from "../constant/sitemap"
 import Service from "../components/Service"
 import piuma from "../assets/piuma1.svg"
@@ -43,6 +44,7 @@ export default function Home() {
           ..
             <h2>Espandi la tua visione</h2>
           </div> */}
+          <News home />
           <div className="center-grid">
             <img src={piuma2} alt="piuma ilaria serena" className="simboli" />
           </div>
@@ -114,7 +116,7 @@ export default function Home() {
               link="/che-cosa-è-thetaHealing/"
             />
             <Service
-              title="crescita"
+              title="Dixcorso"
               symbol="square1"
               link="/crescita-evoluzione/"
             />

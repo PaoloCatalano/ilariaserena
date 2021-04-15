@@ -27,6 +27,7 @@ Variables
   --scuro: #323c4e; /*50, 60, 78*/
   --scurissimo: #454444; /*69, 68, 68*/
   --grigio: #919191; /*145, 145, 145*/
+  --grigio-medio: #bdbdbd; /*145, 145, 145*/
   --grigio-chiaro: #f8f8f8; /*248, 248, 248*/
   --gold-scuro: #c4a363; /*196, 163, 99*/
   --white: #ffffff;
@@ -1086,3 +1087,49 @@ Service
     visibility: visible;
   }
 } */
+
+/* 
+========== 
+ NEWS       
+========== 
+*/
+.news {
+  display: grid;
+  place-items: center;
+  margin: 3rem 2rem;
+}
+.news-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+.news div {
+  width: 100%;
+  height: 100%;
+}
+.news-contenuto p {
+  border-bottom: solid 1px var(--grigio-medio);
+}
+.allNews-link {
+  border-bottom: solid 2px var(--grigio-medio);
+}
+.allNews-link:hover {
+  border-bottom: solid 2px var(--gold-scuro);
+}
+.news-contenuto article {
+  margin: 2rem 0;
+  border: solid 2px transparent;
+  transition: var(--transition);
+}
+.news-contenuto article:hover {
+  border: solid 2px var(--gold-scuro);
+  transform: scale(1.02);
+}
+
+.news-contenuto section {
+  font-size: 1rem;
+  color: var(--grigio);
+  display: flex;
+  flex-direction: row-reverse;
+}
