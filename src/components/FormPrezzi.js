@@ -1,35 +1,47 @@
 import React from "react"
+import { useForm, ValidationError } from "@formspree/react"
 
 const FormPrezzi = () => {
+  const [state, handleSubmit] = useForm("booking")
+
+  if (state.succeeded) {
+    return (
+      <div className="form-prezzi">
+        <h1>Grazie!</h1>
+      </div>
+    )
+  }
+
   return (
     <div className="form-prezzi">
       <form
         id="fs-frm"
-        name="survey-form"
+        name="booking"
         acceptCharset="utf-8"
-        action="https://formspree.io/f/mbjpwgrz"
-        method="post"
+        onSubmit={handleSubmit}
       >
         <fieldset id="fs-frm-inputs"></fieldset>
-        <label htmlFor="full-name">Nome</label>
+        <label htmlFor="name">Nome</label>
         <input
           type="text"
           name="name"
-          id="full-name"
+          id="name"
           placeholder="Nome e Cognome"
           required
         />
-        <label htmlFor="email-address">Email</label>
+        <ValidationError field="name" prefix="Name" errors={state.errors} />
+        <label htmlFor="email">Email</label>
         <input
           type="email"
-          name="_replyto"
-          id="email-address"
+          name="email"
+          id="email"
           placeholder="email@domain.tld"
           required
         />
+        <ValidationError field="email" prefix="Email" errors={state.errors} />
         <fieldset id="fs-frm-selects">
-          <label htmlFor="timely">Scegli il servizio</label>
-          <select name="timely" id="timely" required>
+          <label htmlFor="servizio">Scegli il servizio</label>
+          <select name="servizio" id="servizio" required>
             <option value="Choose" defaultValue="" disabled="">
               Selezione
             </option>
@@ -40,6 +52,11 @@ const FormPrezzi = () => {
             <option value="meditazioni">Meditazioni</option>
             <option value="eventi">Eventi</option>
           </select>
+          <ValidationError
+            field="service"
+            prefix="Service"
+            errors={state.errors}
+          />
         </fieldset>
         <label htmlFor="message">Ulteriori annotazioni</label>
         <textarea
@@ -55,6 +72,7 @@ const FormPrezzi = () => {
           value="Prenotazione"
         />
         <input type="submit" value="Prenota Adesso" style={{ margin: 0 }} />
+        <ValidationError errors={state.errors} />
       </form>
     </div>
   )

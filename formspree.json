@@ -1,0 +1,11 @@
+{
+  "forms": {
+    "booking": {
+      "name": "Booking",
+      "actions": [{ "type": "email", "to": "ilariaserenag@gmail.com" }],
+      "fields": {
+        "email": { "required": true }
+      }
+    }
+  }
+}

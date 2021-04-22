@@ -1,45 +1,62 @@
 import React from "react"
+import { useForm, ValidationError } from "@formspree/react"
 
 const FormPrezzi = () => {
+  const [state, handleSubmit] = useForm("booking")
+
+  if (state.succeeded) {
+    return (
+      <div className="form-prezzi">
+        <h1>Thank you!</h1>
+      </div>
+    )
+  }
+
   return (
     <div className="form-prezzi">
       <form
         id="fs-frm"
-        name="survey-form"
+        name="booking"
         acceptCharset="utf-8"
-        action="https://formspree.io/f/mbjpwgrz"
-        method="post"
+        onSubmit={handleSubmit}
       >
         <fieldset id="fs-frm-inputs"></fieldset>
-        <label htmlFor="full-name">Name</label>
+        <label htmlFor="name">Name</label>
         <input
           type="text"
           name="name"
-          id="full-name"
+          id="name"
           placeholder="First and Last"
           required
         />
-        <label htmlFor="email-address">Email Address</label>
+        <ValidationError field="name" prefix="Name" errors={state.errors} />
+        <label htmlFor="email">Email Address</label>
         <input
           type="email"
-          name="_replyto"
-          id="email-address"
+          name="email"
+          id="email"
           placeholder="email@domain.tld"
           required
         />
+        <ValidationError field="email" prefix="Email" errors={state.errors} />
         <fieldset id="fs-frm-selects">
-          <label htmlFor="timely">Choose the service</label>
-          <select name="timely" id="timely" required>
+          <label htmlFor="service">Choose the service</label>
+          <select name="service" id="service" required>
             <option value="Choose" defaultValue="" disabled="">
               Select
             </option>
             <option value="thetaHealing">ThetaHealing</option>
             <option value="dixcorso">Dixcorso</option>
-            <option value="terapia sonica">Sonic Therapy</option>
+            <option value="Sonic Therapy">Sonic Therapy</option>
             <option value="counseling">Counseling</option>
-            <option value="meditazioni">Meditations</option>
-            <option value="eventi">Events</option>
+            <option value="Meditations">Meditations</option>
+            <option value="Events">Events</option>
           </select>
+          <ValidationError
+            field="service"
+            prefix="Service"
+            errors={state.errors}
+          />
         </fieldset>
         <label htmlFor="message">More Info</label>
         <textarea
@@ -55,6 +72,7 @@ const FormPrezzi = () => {
           value="Booking Responses"
         />
         <input type="submit" value="Book Now" style={{ margin: 0 }} />
+        <ValidationError errors={state.errors} />
       </form>
     </div>
   )
