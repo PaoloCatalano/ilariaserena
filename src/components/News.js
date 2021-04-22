@@ -28,7 +28,6 @@ const News = ({ home }) => {
   `)
   const oneNews = latest.nodes
   const allNews = all.nodes
-  console.log(oneNews[0].c.contenuto)
   return (
     <div className="news">
       <h1 className="news-title">{`${

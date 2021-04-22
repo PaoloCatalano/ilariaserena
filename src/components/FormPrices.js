@@ -42,9 +42,7 @@ const FormPrezzi = () => {
         <fieldset id="fs-frm-selects">
           <label htmlFor="service">Choose the service</label>
           <select name="service" id="service" required>
-            <option value="Choose" defaultValue="" disabled="">
-              Select
-            </option>
+            <option defaultValue=""></option>
             <option value="thetaHealing">ThetaHealing</option>
             <option value="dixcorso">Dixcorso</option>
             <option value="Sonic Therapy">Sonic Therapy</option>
@@ -58,7 +56,7 @@ const FormPrezzi = () => {
             errors={state.errors}
           />
         </fieldset>
-        <label htmlFor="message">More Info</label>
+        <label htmlFor="message">More Details</label>
         <textarea
           rows="3"
           name="message"
