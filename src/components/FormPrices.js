@@ -7,7 +7,7 @@ const FormPrezzi = () => {
         id="fs-frm"
         name="survey-form"
         acceptCharset="utf-8"
-        action="https://formspree.io/f/{form_id}"
+        action="https://formspree.io/f/mbjpwgrz"
         method="post"
       >
         <fieldset id="fs-frm-inputs"></fieldset>

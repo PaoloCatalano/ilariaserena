@@ -16,7 +16,7 @@ const Newsletters = ({ en }) => {
         acceptCharset="utf-8"
         action="https://formspree.io/f/mbjpwgrz"
         method="post"
-        data-netlify="true"
+        
       >
         <fieldset id="fs-frm-inputs">
           <input
