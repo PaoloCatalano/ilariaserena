@@ -4,8 +4,9 @@ import Carta from "../components/Carta"
 import SEO from "../components/Seo"
 import Prezzo from "../components/Prezzo"
 import FormPrezzi from "../components/FormPrezzi"
-import sitemap from "../constant/sitemap"
 import piuma2 from "../assets/piuma2.svg"
+import sitemap from "../constant/sitemap"
+import { graphql } from "gatsby"
 
 const prezzi = ({
   data: {
@@ -29,6 +30,7 @@ const prezzi = ({
         <article className="prezzi body">
           <div className="center-grid">
             <h2>PRONTI PER IL CAMBIAMENTO?</h2>
+            <h2>PRENOTA ADESSO</h2>
           </div>
           <FormPrezzi />
           <h2
@@ -44,7 +46,7 @@ const prezzi = ({
             <img src={piuma2} alt="piuma ilaria serena" className="simboli" />
           </div>
           <Prezzo id="thetaHealing" titolo="thetaHealing" desc={thetahealing} />
-          <Prezzo id="crescita" titolo="dixcorso" desc={dixcorso} />
+          <Prezzo id="dixcorso" titolo="dixcorso" desc={dixcorso} />
           <Prezzo
             id="soundTherapy"
             titolo="terapia sonica"

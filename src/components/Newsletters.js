@@ -1,11 +1,9 @@
 import React from "react"
-import {RiMailSendLine} from 'react-icons/ri'
+import { RiMailSendLine } from "react-icons/ri"
 
-const Newsletters = ({en}) => {
-     
-    
+const Newsletters = ({ en }) => {
   return (
-    <div>
+    <div className="newsletter">
       <div className="newletter-title">
         <RiMailSendLine className="icon" />
         <label htmlFor="email-address">

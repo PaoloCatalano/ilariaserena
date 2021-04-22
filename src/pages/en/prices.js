@@ -3,10 +3,26 @@ import Layout from "../../components/Layout"
 import Card from "../../components/Card"
 import SEO from "../../components/Seo"
 import sitemap from "../../constant/sitemap"
+import Prezzo from "../../components/Prezzo"
+import FormPrices from "../../components/FormPrices"
+import piuma2 from "../../assets/piuma2.svg"
+import { graphql } from "gatsby"
 
-const prezzi = () => {
+const prices = ({
+  data: {
+    contentfulPrices: {
+      thetahealing: { thetahealing },
+      terapiaSonica: { terapiaSonica },
+      meditazioni: { meditazioni },
+      counseling: { counseling },
+      dixcorso: { dixcorso },
+      eventi: { eventi },
+    },
+  },
+}) => {
   const position = sitemap.prezzi
   const title = "Prices"
+
   return (
     <>
       <SEO
@@ -18,112 +34,58 @@ const prezzi = () => {
         <article className="prezzi body">
           <div className="center-grid">
             <h2>READY FOR A CHANGE?</h2>
+            <h2>BOOK NOW</h2>
           </div>
-          <div id="thetaHealing"></div>
-          <div className="circle2 title center-grid">
-            <h2>thetaHeiling</h2>
+          <FormPrices />
+          <h2
+            style={{
+              margin: "5rem",
+              textTransform: "uppercase",
+              borderBottom: "solid 1px  var(--gold)",
+            }}
+          >
+            Services
+          </h2>
+          <div className="center-grid">
+            <img src={piuma2} alt="piuma ilaria serena" className="simboli" />
           </div>
-          <section className="contenitore-card">
-            <Card
-              title="TethaHealing Once"
-              price="81"
-              once={true}
-              subtitle="One Hour Session"
-            />
-            <Card
-              title="ThetaHealing Package"
-              price="195"
-              once={false}
-              subtitle="Three Sessions Package"
-            />
-          </section>
-          <article className="sezione-prezzi">
-            <ul className="prezzi">
-              <li>
-                A session last about 60 minutes and can be done in person, over
-                the phone or video chat.
-              </li>
-              <li>
-                All you will need to do is to be in a comfortable position and
-                just relax.
-              </li>
-              <div id="sound"></div>
-              <li>
-                I recommend you to drink plenty of water on the day of the
-                session, it will helps your body to stay clean to accept a
-                deeper healing.
-              </li>
-            </ul>
-          </article>
-          <div id="growth"></div>
-          <div className="square1 title center-grid">
-            <h2>Growth</h2>
-          </div>
-          <section className="contenitore-card">
-            <Card
-              title="Growth Evolution Once"
-              price="81"
-              once={true}
-              subtitle="One Hour Session"
-            />
-            <Card
-              title="Growth Evolution Package"
-              price="195"
-              once={false}
-              subtitle="Three Sessions Package"
-            />
-          </section>
-          <article className="sezione-prezzi">
-            <ul className="prezzi">
-              <li>
-                A session last about 60 minutes and can be done in person, over
-                the phone or video chat.
-              </li>
-              <li>
-                All you will need to do is to be in a comfortable position and
-                just relax.
-              </li>
-              <li>
-                I recommend you to drink plenty of water on the day of the
-                session, it will helps your body to stay clean to accept a
-                deeper healing.
-              </li>
-            </ul>
-          </article>
-          <div id="soundTherapy"></div>
-          <div className="cube1 title center-grid">
-            <h2> soundTherapy</h2>
-          </div>
-          <section className="contenitore-card">
-            <Card
-              title="Sound Therapy (One Session)"
-              price="20"
-              once={true}
-              subtitle="About 30 minutes"
-            />
-            <Card
-              title="Sound Therapy Package"
-              price="60"
-              once={false}
-              subtitle="Three Sessions Package"
-            />
-          </section>
-          <article className="sezione-prezzi">
-            <ul className="prezzi">
-              <li>
-                A session last about 30 minutes and can be done in person, over
-                the phone or video chat.
-              </li>
-              <li>
-                All you will need to do is to be in a comfortable position and
-                just relax.
-              </li>
-            </ul>
-          </article>
+          <Prezzo id="thetaHealing" titolo="thetaHealing" desc={thetahealing} />
+          <Prezzo id="dixcorso" titolo="dixcorso" desc={dixcorso} />
+          <Prezzo
+            id="soundTherapy"
+            titolo="Sonic Terapy"
+            desc={terapiaSonica}
+          />
+          <Prezzo titolo="counseling" desc={counseling} />
+          <Prezzo titolo="meditations" desc={meditazioni} />
+          <Prezzo titolo="events" desc={eventi} />
         </article>
       </Layout>
     </>
   )
 }
-
-export default prezzi
+export const query = graphql`
+  {
+    contentfulPrices {
+      counseling: childContentfulPricesCounselingTextNode {
+        counseling
+      }
+      dixcorso: childContentfulPricesDixcorsoTextNode {
+        dixcorso
+      }
+      eventi: childContentfulPricesEventiTextNode {
+        eventi
+      }
+      meditazioni: childContentfulPricesMeditazioniTextNode {
+        meditazioni
+      }
+      terapiaSonica: childContentfulPricesTerapiaSonicaTextNode {
+        terapiaSonica
+      }
+      thetahealing: childContentfulPricesThetahealingTextNode {
+        thetahealing
+      }
+    }
+  }
+`
+export default prices

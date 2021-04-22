@@ -648,11 +648,12 @@ Body Pages
 }
 .title h2 {
   text-transform: uppercase;
-  font-weight: 400;
+  /* font-weight: 400; */
   font-size: 3vw;
   margin: auto 0;
   /* to test */
   color: var(--grigio);
+  font-weight: 900;
 }
 
 @media screen and (max-width: 600px) {
@@ -677,7 +678,7 @@ Footer
   text-align: center;
   display: grid;
   place-items: center;
-  padding: 1rem 0 0 0;
+  padding: 1.5rem 0;
 }
 .logo {
   transition: var(--transition);
@@ -793,10 +794,16 @@ prezzi
   font-size: 1rem;
   color: var(--grigio);
 }
+.dollar h1::after,
+.dollar h2::after {
+  content: "$";
+  font-size: 2rem;
+  color: var(--grigio);
+}
 @media screen and (max-width: 699px) {
   .sezione-prezzi {
     place-items: center;
-    grid: repeat(auto-fill, 5rem) / 1fr;
+    grid: 1fr / 1fr;
   }
 }
 /*
@@ -933,18 +940,18 @@ Scroll Arrow
   margin: 0.5rem;
   color: var(--chiaro);
 }
-form {
+.newsletter form {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: 1fr;
   place-items: center;
   justify-content: center;
 }
-form input,
-form select,
-form textarea,
-form fieldset,
-form optgroup,
+.newsletter form input,
+.newsletter form select,
+.newsletter form textarea,
+.newsletter form fieldset,
+.newsletter form optgroup,
 .StripeElement {
   font-family: inherit;
   font-size: 100%;
@@ -959,15 +966,15 @@ form optgroup,
   -moz-appearance: none;
   transition: var(--transition);
 }
-form label,
-form legend {
+.newsletter form label,
+.newsletter form legend {
   font-size: 0.825rem;
   margin-bottom: 0.5rem;
 }
 /* border, padding, margin, width */
-form input,
-form select,
-form textarea,
+.newsletter form input,
+.newsletter form select,
+.newsletter form textarea,
 .StripeElement {
   box-sizing: border-box;
   border: 1px solid var(--medio3);
@@ -976,9 +983,9 @@ form textarea,
   margin: 1.5rem;
   color: var(--white);
 }
-form input:focus,
-form select:focus,
-form textarea:focus,
+.newsletter form input:focus,
+.newsletter form select:focus,
+.newsletter form textarea:focus,
 .StripeElement:focus {
   background-color: white;
   outline-style: solid;
@@ -987,17 +994,17 @@ form textarea:focus,
   outline-offset: -1px;
   border: 1px solid var(--azure);
 }
-form [type="text"],
-form [type="email"],
+.newsletter form [type="text"],
+.newsletter form [type="email"],
 .StripeElement {
   width: 100%;
   color: var(--scuro);
   font-weight: bold;
   border-radius: var(--radius) 0 0 var(--radius);
 }
-form [type="button"],
-form [type="submit"],
-form [type="reset"] {
+.newsletter form [type="button"],
+.newsletter form [type="submit"],
+.newsletter form [type="reset"] {
   width: 90px;
   cursor: pointer;
   -webkit-appearance: button;
@@ -1008,17 +1015,17 @@ form [type="reset"] {
   color: var(--white);
   background-color: var(--medio3);
 }
-form [type="submit"]:hover {
+.newsletter form [type="submit"]:hover {
   background-color: var(--azure);
   color: var(--gold-scuro);
 }
-form [type="button"]:focus,
-form [type="submit"]:focus,
-form [type="reset"]:focus {
+.newsletter form [type="button"]:focus,
+.newsletter form [type="submit"]:focus,
+.newsletter form [type="reset"]:focus {
   outline: none;
 }
 
-form select {
+.newsletter form select {
   text-transform: none;
 }
 /*
@@ -1163,7 +1170,7 @@ Service
 }
 
 /* =====
-form
+form for booking
 ====== */
 /* reset */
 form input,
@@ -1177,7 +1184,7 @@ form label,
   font-size: 100%;
   color: inherit;
   border: none;
-  border-radius: 0;
+  border-radius: var(--radius);
   display: block;
   width: 100%;
   padding: 0;
@@ -1220,11 +1227,19 @@ form [type="email"],
 form [type="button"],
 form [type="submit"],
 form [type="reset"] {
-  width: auto;
   cursor: pointer;
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--medio3);
+  transition: var(--transition);
+}
+form [type="submit"]:hover {
+  background-color: var(--azure);
+  color: var(--gold-scuro);
 }
 form [type="button"]:focus,
 form [type="submit"]:focus,

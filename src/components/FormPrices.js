@@ -11,15 +11,15 @@ const FormPrezzi = () => {
         method="post"
       >
         <fieldset id="fs-frm-inputs"></fieldset>
-        <label htmlFor="full-name">Nome</label>
+        <label htmlFor="full-name">Name</label>
         <input
           type="text"
           name="name"
           id="full-name"
-          placeholder="Nome e Cognome"
+          placeholder="First and Last"
           required
         />
-        <label htmlFor="email-address">Email</label>
+        <label htmlFor="email-address">Email Address</label>
         <input
           type="email"
           name="_replyto"
@@ -28,20 +28,20 @@ const FormPrezzi = () => {
           required
         />
         <fieldset id="fs-frm-selects">
-          <label htmlFor="timely">Scegli il servizio</label>
+          <label htmlFor="timely">Choose the service</label>
           <select name="timely" id="timely" required>
             <option value="Choose" defaultValue="" disabled="">
-              Selezione
+              Select
             </option>
             <option value="thetaHealing">ThetaHealing</option>
             <option value="dixcorso">Dixcorso</option>
-            <option value="terapia sonica">Terapia Sonica</option>
+            <option value="terapia sonica">Sonic Therapy</option>
             <option value="counseling">Counseling</option>
-            <option value="meditazioni">Meditazioni</option>
-            <option value="eventi">Eventi</option>
+            <option value="meditazioni">Meditations</option>
+            <option value="eventi">Events</option>
           </select>
         </fieldset>
-        <label htmlFor="message">Ulteriori annotazioni</label>
+        <label htmlFor="message">More Info</label>
         <textarea
           rows="3"
           name="message"
@@ -52,9 +52,9 @@ const FormPrezzi = () => {
           type="hidden"
           name="_subject"
           id="email-subject"
-          value="Prenotazione"
+          value="Booking Responses"
         />
-        <input type="submit" value="Prenota Adesso" style={{ margin: 0 }} />
+        <input type="submit" value="Book Now" style={{ margin: 0 }} />
       </form>
     </div>
   )
