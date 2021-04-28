@@ -141,7 +141,7 @@ const Tuning_Fork = () => {
           </div>
           <div className="padding1 padding-center">
             <p>
-              A session lasts about 30/35 minutes. The number of sessions needed
+              A session lasts about 35/40 minutes. The number of sessions needed
               depends on your response to each experience. In general, if you
               are new to this therapy, I may suggest to start with three
               sessions, once a week. I believe that the benefits are immediate,
@@ -154,7 +154,7 @@ const Tuning_Fork = () => {
               <p>
                 <span>
                   <Link to="/en/prices/#soundTherapy">
-                    One session in person 20 €.
+                    Discover all the prices for an ONLINE session.
                   </Link>
                 </span>
               </p>

@@ -152,7 +152,7 @@ const Diapason = () => {
           </div>
           <div className="padding1 padding-center">
             <p>
-              La terapia prevede sedute che durano 30/35 minuti circa. Riguardo
+              La terapia prevede sedute che durano 35/40 minuti circa. Riguardo
               alla frequenza, questa dipende dall’esito del primo incontro. Gli
               effetti benefici possono essere immediati e risolutivi già dopo la
               prima seduta. Tuttavia, se è la prima volta che si sperimenta una
@@ -167,7 +167,7 @@ const Diapason = () => {
               <p>
                 <span>
                   <Link to="/prezzi/#soundTherapy">
-                    Il costo di una seduta è di 20 euro.
+                    Scopri il prezzo di una seduta.
                   </Link>
                 </span>
               </p>

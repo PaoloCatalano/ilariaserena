@@ -20,6 +20,10 @@ export const linksIt = [
     url: "/la-terapia-del-diapason/",
   },
   {
+    text: "med",
+    url: "/meditazioni/",
+  },
+  {
     text: "prezzi",
     url: "/prezzi/",
   },
@@ -40,6 +44,10 @@ export const linksEn = [
   {
     text: "soundtherapy",
     url: "/en/tuning-fork-sound-therapy/",
+  },
+  {
+    text: "med",
+    url: "/en/meditations/",
   },
   {
     text: "prices",

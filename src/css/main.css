@@ -1272,6 +1272,15 @@ form select {
 .markdown p:last-child {
   width: 100%;
 }
+.markdown a {
+  text-decoration: underline;
+}
+
+.markdown a::after {
+  content: url("../assets/external-link-blue.png");
+  margin-left: 10px;
+}
+
 .news-contenuto section {
   font-size: 1rem;
   color: var(--grigio);
@@ -1293,4 +1302,10 @@ form select {
   .news-contenuto article {
     margin: 2rem 0;
   }
+}
+
+audio {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  color: var(--medio3);
 }

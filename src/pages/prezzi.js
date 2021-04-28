@@ -44,15 +44,29 @@ const prezzi = ({
           <div className="center-grid">
             <img src={piuma2} alt="piuma ilaria serena" className="simboli" />
           </div>
-          <Prezzo id="thetaHealing" titolo="thetaHealing" desc={thetahealing} />
+          <Prezzo
+            id="thetaHealing"
+            titolo="thetaHealing"
+            desc={thetahealing}
+            link="/come-funziona-una-seduta"
+            descLink="come funziona una seduta?"
+          />
           <Prezzo id="dixcorso" titolo="dixcorso" desc={dixcorso} />
           <Prezzo
             id="soundTherapy"
             titolo="terapia sonica"
             desc={terapiaSonica}
+            link="/la-terapia-del-diapason"
+            descLink="scopri di piú"
           />
           <Prezzo titolo="counseling" desc={counseling} />
-          <Prezzo titolo="meditazioni" desc={meditazioni} />
+          <Prezzo
+            titolo="meditazioni"
+            id="med"
+            desc={meditazioni}
+            link="/meditazioni/#med"
+            descLink="Vai ai Sample"
+          />
           <Prezzo titolo="eventi" desc={eventi} />
         </article>
       </Layout>
