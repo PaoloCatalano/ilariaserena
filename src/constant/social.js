@@ -1,9 +1,8 @@
 import React from "react"
 import { FaWhatsapp } from "react-icons/fa"
-import { ImFacebook2 } from "react-icons/im"
+import { ImFacebook2, ImSoundcloud } from "react-icons/im"
 import { FiMail } from "react-icons/fi"
-import { FaInstagram } from "react-icons/fa"
-
+import { FaInstagram, FaYoutube, FaTelegram } from "react-icons/fa"
 
 const email = "ilariaserenag@gmail.com"
 const number = "393701535245"
@@ -33,24 +32,36 @@ export const socials = [
     url: "https://www.instagram.com/ilari.ah",
     icon: <FaInstagram className="icon" />,
   },
+  {
+    id: 5,
+    text: "Ilaria Serena",
+    url: "https://www.youtube.com/channel/UCo5aa85y9T09lGR-9iE8LOA/videos",
+    icon: <FaYoutube className="icon" />,
+  },
+  {
+    id: 6,
+    text: "@ilaria_serena",
+    url: "https://t.me/ocxid",
+    icon: <FaTelegram className="icon" />,
+  },
+  {
+    id: 7,
+    text: "larry-lee-spears",
+    url: "https://soundcloud.com/larry-lee-spears",
+    icon: <ImSoundcloud className="icon" />,
+  },
 ]
 
-const tempSocials = socials.map(({id, text, url, icon}) => {
+const tempSocials = socials.map(({ id, text, url, icon }) => {
   return (
     <li key={id}>
-      <a
-        href={url}
-      >
-          {icon}
-      </a>
+      <a href={url} className="a-social">
+        {icon}
         {text}
+      </a>
     </li>
   )
 })
 export default () => {
-  return (
-    <ul>
-      {tempSocials}
-    </ul>
-  )
+  return <ul>{tempSocials}</ul>
 }

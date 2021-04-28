@@ -42,7 +42,7 @@ const FormPrezzi = () => {
         <fieldset id="fs-frm-selects">
           <label htmlFor="servizio">Scegli il servizio</label>
           <select name="servizio" id="servizio" required>
-            <option defaultValue=""></option>
+            <option defaultValue="" aria-label="empty"></option>
             <option value="thetaHealing">ThetaHealing</option>
             <option value="dixcorso">Dixcorso</option>
             <option value="terapia sonica">Terapia Sonica</option>

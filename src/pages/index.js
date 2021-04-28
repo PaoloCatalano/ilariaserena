@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React from "react"
 import Layout from "../components/Layout"
 import Symbol from "../components/Symbol"
 import Img from "gatsby-image"
@@ -115,11 +115,7 @@ export default function Home() {
               symbol="circle2"
               link="/che-cosa-è-thetaHealing/"
             />
-            <Service
-              title="Dixcorso"
-              symbol="square1"
-              link="/crescita-evoluzione/"
-            />
+            <Service title="Dixcorso" symbol="square1" link="/dixcorso/" />
             <Service
               title="soundTherapy"
               symbol="cube1"

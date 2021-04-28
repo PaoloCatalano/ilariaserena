@@ -1,25 +1,10 @@
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import PiumaLogo from "../components/PiumaLogo"
 
 const SistemaCredenze = () => {
-  const allPics = useStaticQuery(graphql`
-    {
-      pics: allContentfulPictures(
-        sort: { fields: picture___title, order: ASC }
-      ) {
-        nodes {
-          picture {
-            fluid {
-              ...GatsbyContentfulFluid_noBase64
-            }
-          }
-        }
-      }
-    }
-  `)
   const link = "/en/the-belief-system/"
   const title = "credenze"
   return (

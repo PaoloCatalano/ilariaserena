@@ -44,7 +44,7 @@ export default function Home() {
             symbol="sphere"
             title="Empower, Heal, Create the life you dream of"
           />
-          <News home />
+          <News home homeEN />
 
           <div className="center-grid">
             <img src={piuma2} alt="piuma ilaria serena" className="simboli" />
@@ -105,7 +105,7 @@ export default function Home() {
               title="dixcorso"
               symbol="square1"
               en
-              link="/en/growth-evolution/"
+              link="/en/dixcorso/"
             />
             <Service
               title="soundTherapy"

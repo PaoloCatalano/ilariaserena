@@ -12,13 +12,13 @@ const ScrollArrow = () => {
     }
   }
 
-const checkWindow = () => {
-      if (typeof window !== "undefined") {
-        return window.pageYOffset
-      } 
+  const checkWindow = () => {
+    if (typeof window !== "undefined") {
+      return window.pageYOffset
     }
+  }
 
-    let windowChecked = checkWindow();
+  let windowChecked = checkWindow()
 
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -33,6 +33,7 @@ const checkWindow = () => {
     return () => {
       window.removeEventListener("scroll", checkScrollTop)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     windowChecked,
     /**NO window.pageYOffset, because window is not defined */

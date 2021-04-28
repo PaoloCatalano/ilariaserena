@@ -6,7 +6,6 @@ import Symbol from "../components/Symbol"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import sitemap from "../constant/sitemap"
-import piuma from "../assets/piumaCerchio.svg"
 
 const Diapason = () => {
   const allPics = useStaticQuery(graphql`
@@ -98,7 +97,7 @@ const Diapason = () => {
                 <a
                   href="https://www.eileenmckusick.com/"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   Eileen Day McKusick
                 </a>
@@ -106,7 +105,7 @@ const Diapason = () => {
                 <a
                   href="https://it.wikipedia.org/wiki/Risonanza_Schumann"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   {" "}
                   Risonanza Schumann

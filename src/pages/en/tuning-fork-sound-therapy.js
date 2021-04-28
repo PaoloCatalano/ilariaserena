@@ -106,7 +106,7 @@ const Tuning_Fork = () => {
                 <a
                   href="https://www.eileenmckusick.com/"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   Eileen Day McKusick
                 </a>
@@ -115,7 +115,7 @@ const Tuning_Fork = () => {
                 <a
                   href="https://en.wikipedia.org/wiki/Schumann_resonances"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   Schumann Resonances
                 </a>

@@ -13,7 +13,7 @@ export const linksIt = [
   },
   {
     text: "dixcorso",
-    url: "/crescita-evoluzione/",
+    url: "/dixcorso/",
   },
   {
     text: "suonoterapia",
@@ -35,7 +35,7 @@ export const linksEn = [
   },
   {
     text: "dixcorso",
-    url: "/en/growth-evolution/",
+    url: "/en/dixcorso/",
   },
   {
     text: "soundtherapy",

@@ -664,7 +664,7 @@ Body Pages
 /*
 =============== 
 Footer
-===============img
+===============
 */
 .space {
   display: block;
@@ -679,6 +679,10 @@ Footer
   display: grid;
   place-items: center;
   padding: 1.5rem 0;
+}
+.a-social {
+  color: var(--chiaro);
+  font-weight: lighter;
 }
 .logo {
   transition: var(--transition);
@@ -1123,52 +1127,6 @@ Service
   }
 } */
 
-/* 
-========== 
- NEWS       
-========== 
-*/
-.news {
-  display: grid;
-  place-items: center;
-  margin: 3rem 2rem;
-}
-.news-title {
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--gold);
-  margin-bottom: 2rem;
-}
-.news div {
-  width: 100%;
-  height: 100%;
-}
-.news-contenuto p {
-  border-bottom: solid 1px var(--grigio-medio);
-}
-.allNews-link {
-  border-bottom: solid 2px var(--grigio-medio);
-}
-.allNews-link:hover {
-  border-bottom: solid 2px var(--gold-scuro);
-}
-.news-contenuto article {
-  margin: 2rem 0;
-  border: solid 2px transparent;
-  transition: var(--transition);
-}
-.news-contenuto article:hover {
-  border: solid 2px var(--gold-scuro);
-  transform: scale(1.02);
-}
-
-.news-contenuto section {
-  font-size: 1rem;
-  color: var(--grigio);
-  display: flex;
-  flex-direction: row-reverse;
-}
-
 /* =====
 form for booking
 ====== */
@@ -1262,4 +1220,77 @@ form select {
 .form-prezzi form {
   display: flex;
   flex-direction: column;
+}
+/* 
+========== 
+ NEWS       
+========== 
+*/
+.news {
+  display: grid;
+  place-items: center;
+  margin: 3rem 2rem;
+}
+.news-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+.news div {
+  width: 100%;
+  height: 100%;
+}
+.news-contenuto p {
+  border-bottom: solid 1px var(--grigio-medio);
+}
+.allNews-link {
+  border-bottom: solid 2px var(--grigio-medio);
+}
+.allNews-link:hover {
+  border-bottom: solid 2px var(--gold-scuro);
+}
+
+.news-contenuto article {
+  width: 100%;
+  max-width: 1100px;
+  margin: 2rem auto;
+  border: solid 2px transparent;
+  transition: var(--transition);
+}
+
+.news-contenuto article:hover {
+  border: solid 2px var(--gold-scuro);
+  transform: scale(1.02);
+}
+
+.markdown {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.markdown p:last-child {
+  width: 100%;
+}
+.news-contenuto section {
+  font-size: 1rem;
+  color: var(--grigio);
+  display: flex;
+  flex-direction: row-reverse;
+}
+.news-contenuto img {
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 500px) {
+  .news-contenuto img {
+    width: 100%;
+    height: 100%;
+  }
+  .markdown {
+    flex-wrap: wrap;
+  }
+  .news-contenuto article {
+    margin: 2rem 0;
+  }
 }

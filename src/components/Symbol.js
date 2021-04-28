@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useCallback } from "react"
 const Symbol = ({ symbol, title }) => {
   const elementRef = useRef(null)
-  const checkWindow = () => {
+  const checkWindow = useCallback(() => {
     if (typeof window !== "undefined") {
       return window.pageYOffset
     }
-  }
+  }, [])
   const checkScroll = () => {
     if (window.pageYOffset > elementRef.current.offsetTop - 400) {
       elementRef.current.classList.add("effect")

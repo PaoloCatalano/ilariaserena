@@ -10,7 +10,7 @@ module.exports = {
     title: "Ilaria Serena",
     description:
       "Trasforma, Guarisci, Crea la vita che sogni. Benvenuti sulla mia pagina web. Grazie per aver scelto di voler scoprire di più sul ThetaHealing! A prescindere da quanto questa tecnica sia quella giusta per te,hai rappresenta un passo importantissimo! Hai deciso di aprirti al cambiamento, di guarire, di crescere e di realizzare i tuoi desideri per davvero!",
-    url: "https://ilariaserena.netlify.app", // No trailing slash allowed!
+    url: "https://www.ilariaserena.cloud", // No trailing slash allowed!
     image: "/Header.png", // Path to your image you placed in the 'static' folder
     FacebookUsername: "Ilaria Serena",
     InstagramUsername: "ilari.ah",

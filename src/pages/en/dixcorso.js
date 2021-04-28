@@ -6,8 +6,8 @@ import Symbol from "../../components/Symbol"
 import sitemap from "../../constant/sitemap"
 import News from "../../components/News"
 
-const Crescita = () => {
-  const position = sitemap.crescita
+const DixcorsoEN = () => {
+  const position = sitemap.dixcorso
   const title = "Dixcorso"
   return (
     <>
@@ -63,4 +63,4 @@ const Crescita = () => {
   )
 }
 
-export default Crescita
+export default DixcorsoEN

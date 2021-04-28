@@ -6,8 +6,8 @@ import Symbol from "../components/Symbol"
 import sitemap from "../constant/sitemap"
 import News from "../components/News"
 
-const Crescita = () => {
-  const position = sitemap.crescita
+const Dixcorso = () => {
+  const position = sitemap.dixcorso
   const title = "Dixcorso"
   return (
     <>
@@ -65,4 +65,4 @@ Mi chiamo Discorso, per gli amici Dix.. Mi hanno definito uno speciale…”la n
   )
 }
 
-export default Crescita
+export default Dixcorso

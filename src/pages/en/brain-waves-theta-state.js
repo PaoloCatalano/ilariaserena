@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../../components/Layout"
 import SEO from "../../components/Seo"
 import PiumaLogo from "../../components/PiumaLogo"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 const brainWavesThetaState = () => {
   const title = "States and Waves"

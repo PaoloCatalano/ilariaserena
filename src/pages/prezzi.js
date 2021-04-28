@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Carta from "../components/Carta"
 import SEO from "../components/Seo"
 import Prezzo from "../components/Prezzo"
 import FormPrezzi from "../components/FormPrezzi"

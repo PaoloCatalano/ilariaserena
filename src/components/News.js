@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import ReactMarkdown from "react-markdown"
 
-const News = ({ home }) => {
+const News = ({ home, homeEN }) => {
   const { all, latest } = useStaticQuery(graphql`
     {
       all: allContentfulNews(sort: { fields: updatedAt, order: DESC }) {
@@ -36,31 +36,38 @@ const News = ({ home }) => {
       <div className="news-contenuto">
         {home ? (
           <article>
-            <ReactMarkdown linkTarget="_blank">
-              {oneNews[0].c.contenuto}
-            </ReactMarkdown>
+            <div className="markdown">
+              <ReactMarkdown linkTarget="_blank">
+                {oneNews[0].c.contenuto}
+              </ReactMarkdown>
+            </div>
             <section>{oneNews[0].createdAt}</section>
           </article>
         ) : (
           allNews.map((news, index) => {
-            console.log(news.c.contenuto)
-
             return (
               <article key={index}>
-                <ReactMarkdown linkTarget="_blank">
-                  {news.c.contenuto}
-                </ReactMarkdown>
+                <div className="markdown">
+                  <ReactMarkdown linkTarget="_blank">
+                    {news.c.contenuto}
+                  </ReactMarkdown>
+                </div>
                 <section>{news.createdAt}</section>
               </article>
             )
           })
         )}
       </div>
-      {home && (
-        <Link to="/crescita-evoluzione/#allNews" className="allNews-link">
-          ALL NEWS
-        </Link>
-      )}
+      {home &&
+        (homeEN ? (
+          <Link to="/en/dixcorso/#allNews" className="allNews-link">
+            ALL NEWS
+          </Link>
+        ) : (
+          <Link to="/dixcorso/#allNews" className="allNews-link">
+            TUTTE LE NEWS
+          </Link>
+        ))}
     </div>
   )
 }
