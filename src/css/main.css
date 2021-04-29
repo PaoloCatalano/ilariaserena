@@ -1204,7 +1204,10 @@ form [type="submit"]:focus,
 form [type="reset"]:focus {
   outline: none;
 }
-
+form [type="submit"]:disabled {
+  pointer-events: none;
+  background-color: var(--grigio);
+}
 form select {
   text-transform: none;
 }
@@ -1242,7 +1245,6 @@ form select {
   height: 100%;
 }
 .news-contenuto p {
-  border-bottom: solid 1px var(--grigio-medio);
 }
 .allNews-link {
   border-bottom: solid 2px var(--grigio-medio);
@@ -1268,12 +1270,21 @@ form select {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  align-items: center;
 }
 .markdown p:last-child {
   width: 100%;
 }
 .markdown a {
-  text-decoration: underline;
+  margin-top: 1rem;
+  display: flex;
+  place-items: center;
+  flex-wrap: wrap;
+}
+
+.markdown a img {
+  margin-right: 2rem;
+  margin-bottom: 1rem;
 }
 
 .markdown a::after {
@@ -1286,12 +1297,13 @@ form select {
   color: var(--grigio);
   display: flex;
   flex-direction: row-reverse;
+  border-top: solid 1px var(--grigio-medio);
 }
 .news-contenuto img {
   width: 100px;
   height: 100px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 570px) {
   .news-contenuto img {
     width: 100%;
     height: 100%;

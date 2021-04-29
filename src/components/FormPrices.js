@@ -7,7 +7,12 @@ const FormPrezzi = () => {
   if (state.succeeded) {
     return (
       <div className="form-prezzi">
-        <h1>Thank you!</h1>
+        <h1 style={{ textAlign: "center", marginBottom: "1rem" }}>
+          Thank you!
+        </h1>
+        <form>
+          <input type="submit" value="New Booking" />
+        </form>
       </div>
     )
   }
@@ -69,7 +74,12 @@ const FormPrezzi = () => {
           id="email-subject"
           value="Booking Responses"
         />
-        <input type="submit" value="Book Now" style={{ margin: 0 }} />
+        <input
+          disabled={state.submitting}
+          type="submit"
+          value="Book Now"
+          style={{ margin: 0 }}
+        />
         <ValidationError errors={state.errors} />
       </form>
     </div>

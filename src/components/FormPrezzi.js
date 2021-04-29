@@ -7,7 +7,10 @@ const FormPrezzi = () => {
   if (state.succeeded) {
     return (
       <div className="form-prezzi">
-        <h1>Grazie!</h1>
+        <h1 style={{ textAlign: "center", marginBottom: "1rem" }}>Grazie!</h1>
+        <form>
+          <input type="submit" value="Nuova Prenotazione" />
+        </form>
       </div>
     )
   }
@@ -29,6 +32,7 @@ const FormPrezzi = () => {
           placeholder="Nome e Cognome"
           required
         />
+
         <ValidationError field="name" prefix="Name" errors={state.errors} />
         <label htmlFor="email">Email</label>
         <input
@@ -69,7 +73,12 @@ const FormPrezzi = () => {
           id="email-subject"
           value="Prenotazione"
         />
-        <input type="submit" value="Prenota Adesso" style={{ margin: 0 }} />
+        <input
+          disabled={state.submitting}
+          type="submit"
+          value="Prenota Adesso"
+          style={{ margin: 0 }}
+        />
         <ValidationError errors={state.errors} />
       </form>
     </div>

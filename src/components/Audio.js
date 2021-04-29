@@ -16,7 +16,7 @@ const Audio = ({
 
       <audio controls name={fileName}>
         <source src={url} type={contentType} />
-        <track src={url} kind="captions" srclang="it" label={title} />
+        <track src={url} kind="captions" srcLang="it" label={title} />
         Sorry, your browser doesn't support embedded audio.
       </audio>
     </div>
