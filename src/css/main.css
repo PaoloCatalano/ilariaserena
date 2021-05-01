@@ -1390,7 +1390,8 @@ effetti
   }
 }
 .colorful:hover,
-.colorful:focus {
+.colorful:focus,
+.touched {
   font-weight: 900;
   filter: opacity(1) !important;
   color: inherit;

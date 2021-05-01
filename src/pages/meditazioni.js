@@ -1,23 +1,59 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React, { useEffect, useRef, useCallback } from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import PiumaLogo from "../components/PiumaLogo"
 import Audio from "../components/Audio"
 import sitemap from "../constant/sitemap"
 import piuma2 from "../assets/piuma1oriz.svg"
 
-const meditazioni = ({ data }) => {
+const Meditazioni = ({ data }) => {
   const {
     allContentfulAudioSample: { nodes: tracks },
   } = data
   const position = sitemap.med
   const title = "Meditazioni"
 
-  const testo = `Ehm… scusate, sono Dixcorso. Ci tengo a precisare…fin qui, tutto molto romantico e profondo. Ma io sono un tipo della generazione xyz..non mi perdo in chiacchiere! Vado a ritmo con la vita. Quindi preparati all’idea che queste meditazioni non sono meditazioni. sono riflessioni soniche medicali contemporanee. Capito più o meno? Ascolta i campioni che ho caricato per te!`.split(
+  const testo = `Ehm… scusate, sono Dixcorso! Ci tengo a precisare…fin qui, tutto molto romantico e profondo. Ma io sono un tipo della generazione xyz. ..non mi perdo in chiacchiere! Vado a ritmo con la vita. Quindi preparati all’idea che queste meditazioni non sono meditazioni. sono riflessioni soniche medicali contemporanee. Capito più o meno? Ascolta i campioni che ho caricato per te!`.split(
     " "
   )
+
+  const color = useRef(null)
+  const checkWindow = useCallback(() => {
+    if (typeof window !== "undefined") {
+      return window.pageYOffset
+    }
+  }, [])
+
+  useEffect(() => {
+    const arrOfwords = Array.from(color.current.children)
+    const event = window.addEventListener("touchstart", () => {
+      arrOfwords.map(word => {
+        if (
+          word.outerText.includes("Dixcorso") ||
+          word.outerText.includes("xyz") ||
+          word.outerText.includes("generazione")
+        ) {
+          return word.classList.add("touched")
+        } else {
+          return null
+        }
+      })
+    })
+    //touch
+    const eventEnd = window.addEventListener("touchend", () => {
+      arrOfwords.map(word => {
+        return word.classList.remove("touched")
+      })
+    })
+
+    return () => {
+      window.removeEventListener("touchstart", event)
+      window.removeEventListener("touchend", eventEnd)
+    }
+    // eslint-disable-next-line
+  }, [checkWindow])
+
   return (
     <>
       <SEO
@@ -61,19 +97,13 @@ Mentre la mentre “crea”, la musica agisce da cura per l’animo con i suoi s
               propria percezione del corpo nello spazio e del corpo come
               “forma”.
             </p>
-            <p className="dixappear">
-              {/* Ehm… scusate, sono Dixcorso. Ci tengo a precisare…fin qui, tutto
-              molto romantico e profondo. Ma io sono un tipo della generazione
-              xyz..non mi perdo in chiacchiere! Vado a ritmo con la vita. Quindi
-              preparati all’idea che queste meditazioni non sono meditazioni.
-              sono riflessioni soniche medicali contemporanee. Capito più o
-              meno? Ascolta i campioni che ho caricato per te! */}
+            <p className="dixappear" ref={color}>
               {testo.map((t, index) => {
                 return (
-                  <text className="colorful" key={index}>
+                  <b className="colorful" key={index}>
                     {t}&nbsp;
                     <span> </span>
-                  </text>
+                  </b>
                 )
               })}
             </p>
@@ -124,4 +154,4 @@ export const query = graphql`
     }
   }
 `
-export default meditazioni
+export default Meditazioni
