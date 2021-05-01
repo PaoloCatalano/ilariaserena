@@ -14,6 +14,11 @@ const meditazioni = ({ data }) => {
   } = data
   const position = sitemap.med
   const title = "Meditations"
+
+  const testo = `Uhm, excuse me, it’s Dixcorso here. I want to clarify… so far, all very romantic and profound, well done. But I'm the dude of the “xyz generation” .. I don't get lost in “ballade”! I am “on” with the rhythm of Life. So! Be prepared at the idea that these meditations are not meditations. they are contemporary medical sonic trips. Got it more or less? Listen to the samples that I have uploaded for you!`.split(
+    " "
+  )
+
   return (
     <>
       <SEO
@@ -56,14 +61,22 @@ While the mind "creates", the music acts as a cure for the soul with its harmoni
               meditations is to help expanding one's perception of the body in
               the space and of the body as a “shape”.
             </p>
-            <p>
-              Uhm ... excuse-me, it’s Dixcorso here. I want to clarify… so far,
+            <p className="dixappear">
+              {/* Uhm ... excuse-me, it’s Dixcorso here. I want to clarify… so far,
               all very romantic and profound, well done. But I'm the dude of the
               “xyz generation” .. I don't get lost in “ballade”! I am “on” with
               the rhythm of Life. So! Be prepared at the idea that these
               meditations are not meditations. they are contemporary medical
               sonic trips. Got it more or less? Listen to the samples that I
-              have uploaded for you!
+              have uploaded for you! */}
+              {testo.map((t, index) => {
+                return (
+                  <text className="colorful" key={index}>
+                    {t}&nbsp;
+                    <span> </span>
+                  </text>
+                )
+              })}
             </p>
             <center id="med">
               <div className="center-grid">

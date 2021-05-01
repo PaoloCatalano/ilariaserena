@@ -14,6 +14,10 @@ const meditazioni = ({ data }) => {
   } = data
   const position = sitemap.med
   const title = "Meditazioni"
+
+  const testo = `Ehm… scusate, sono Dixcorso. Ci tengo a precisare…fin qui, tutto molto romantico e profondo. Ma io sono un tipo della generazione xyz..non mi perdo in chiacchiere! Vado a ritmo con la vita. Quindi preparati all’idea che queste meditazioni non sono meditazioni. sono riflessioni soniche medicali contemporanee. Capito più o meno? Ascolta i campioni che ho caricato per te!`.split(
+    " "
+  )
   return (
     <>
       <SEO
@@ -57,13 +61,21 @@ Mentre la mentre “crea”, la musica agisce da cura per l’animo con i suoi s
               propria percezione del corpo nello spazio e del corpo come
               “forma”.
             </p>
-            <p>
-              Ehm… scusate, sono Dixcorso. Ci tengo a precisare…fin qui, tutto
+            <p className="dixappear">
+              {/* Ehm… scusate, sono Dixcorso. Ci tengo a precisare…fin qui, tutto
               molto romantico e profondo. Ma io sono un tipo della generazione
               xyz..non mi perdo in chiacchiere! Vado a ritmo con la vita. Quindi
               preparati all’idea che queste meditazioni non sono meditazioni.
               sono riflessioni soniche medicali contemporanee. Capito più o
-              meno? Ascolta i campioni che ho caricato per te!
+              meno? Ascolta i campioni che ho caricato per te! */}
+              {testo.map((t, index) => {
+                return (
+                  <text className="colorful" key={index}>
+                    {t}&nbsp;
+                    <span> </span>
+                  </text>
+                )
+              })}
             </p>
             <center id="med">
               <div className="center-grid">
