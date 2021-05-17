@@ -1409,7 +1409,7 @@ effetti
   transition: var(--transition);
   position: absolute;
   transform: translateY(0%) rotate(0deg);
-  z-index: -1;
+  z-index: 99;
 }
 
 .giu {

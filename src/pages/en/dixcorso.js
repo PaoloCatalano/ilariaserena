@@ -19,27 +19,29 @@ const DixcorsoEN = () => {
     }
   }, [])
 
+  const event = () => {
+    //cat
+    if (window.pageYOffset > cat.current.offsetTop) {
+      cat.current.classList.add("giu")
+    } else cat.current.classList.remove("giu")
+    //zen
+    const scroll = window.scrollY
+    zen.current.style.transform = `rotate(${scroll}deg)`
+    //mega effect
+    const fontSize = scroll / 50
+    if (
+      window.pageYOffset > mega.current.offsetTop - window.innerHeight &&
+      fontSize < 60
+    ) {
+      mega.current.style.fontSize = `${fontSize}px`
+    } else {
+      mega.current.style.fontSize = `large`
+    }
+    //end effects
+  }
+
   useEffect(() => {
-    const event = window.addEventListener("scroll", () => {
-      //cat
-      if (window.pageYOffset > cat.current.offsetTop) {
-        cat.current.classList.add("giu")
-      } else cat.current.classList.remove("giu")
-      //zen
-      const scroll = window.scrollY
-      zen.current.style.transform = `rotate(${scroll}deg)`
-      //mega effect
-      const fontSize = scroll / 50
-      if (
-        window.pageYOffset > mega.current.offsetTop - window.innerHeight &&
-        fontSize < 60
-      ) {
-        mega.current.style.fontSize = `${fontSize}px`
-      } else {
-        mega.current.style.fontSize = `large`
-      }
-      //end effects
-    })
+    window.addEventListener("scroll", event)
     return () => {
       window.removeEventListener("scroll", event)
     }
