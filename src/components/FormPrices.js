@@ -49,7 +49,7 @@ const FormPrezzi = () => {
           <select name="service" id="service" required>
             <option defaultValue="" aria-label="empty"></option>
             <option value="thetaHealing">ThetaHealing</option>
-            <option value="dixcorso">Dixcorso</option>
+            {/* <option value="dixcorso">Dixcorso</option> */}
             <option value="Sonic Therapy">Sonic Therapy</option>
             <option value="counseling">Counseling</option>
             <option value="Meditations">Meditations</option>

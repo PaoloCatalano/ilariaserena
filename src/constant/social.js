@@ -38,14 +38,14 @@ export const socials = [
     url: "https://www.youtube.com/channel/UCo5aa85y9T09lGR-9iE8LOA/videos",
     icon: <FaYoutube className="icon" />,
   },
+  // {
+  //   id: 6,
+  //   text: "@ilaria_serena",
+  //   url: "https://t.me/ocxid",
+  //   icon: <FaTelegram className="icon" />,
+  // },
   {
     id: 6,
-    text: "@ilaria_serena",
-    url: "https://t.me/ocxid",
-    icon: <FaTelegram className="icon" />,
-  },
-  {
-    id: 7,
     text: "larry-lee-spears",
     url: "https://soundcloud.com/larry-lee-spears",
     icon: <ImSoundcloud className="icon" />,

@@ -55,7 +55,7 @@ const prices = ({
             link="/en/how-does-a-session-work"
             descLink="how does a session work?"
           />
-          <Prezzo id="dixcorso" titolo="dixcorso" desc={dixcorso} />
+          {/* <Prezzo id="dixcorso" titolo="dixcorso" desc={dixcorso} /> */}
           <Prezzo
             id="soundTherapy"
             titolo="Sonic Terapy"

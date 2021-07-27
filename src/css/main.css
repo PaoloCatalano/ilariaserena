@@ -1274,6 +1274,12 @@ form select {
   flex-wrap: nowrap;
   align-items: center;
 }
+
+.markdown p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 .markdown p:last-child {
   width: 100%;
 }
