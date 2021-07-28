@@ -2,7 +2,7 @@ import React from "react"
 import { FaWhatsapp } from "react-icons/fa"
 import { ImFacebook2, ImSoundcloud } from "react-icons/im"
 import { FiMail } from "react-icons/fi"
-import { FaInstagram, FaYoutube, FaTelegram } from "react-icons/fa"
+import { FaInstagram, FaYoutube } from "react-icons/fa"
 
 const email = "ilariaserenag@gmail.com"
 const number = "393701535245"
@@ -28,12 +28,6 @@ export const socials = [
   },
   {
     id: 4,
-    text: "ilari.ah",
-    url: "https://www.instagram.com/ilari.ah",
-    icon: <FaInstagram className="icon" />,
-  },
-  {
-    id: 5,
     text: "Ilaria Serena",
     url: "https://www.youtube.com/channel/UCo5aa85y9T09lGR-9iE8LOA/videos",
     icon: <FaYoutube className="icon" />,
@@ -45,10 +39,16 @@ export const socials = [
   //   icon: <FaTelegram className="icon" />,
   // },
   {
-    id: 6,
+    id: 5,
     text: "larry-lee-spears",
     url: "https://soundcloud.com/larry-lee-spears",
     icon: <ImSoundcloud className="icon" />,
+  },
+  {
+    id: 6,
+    text: "dixcorso_magazine",
+    url: "https://instagram.com/dixcorso_magazine",
+    icon: <FaInstagram className="icon" />,
   },
 ]
 
