@@ -13,8 +13,8 @@ const prezzi = ({
       thetahealing: { thetahealing },
       terapiaSonica: { terapiaSonica },
       meditazioni: { meditazioni },
-      counseling: { counseling },
-      dixcorso: { dixcorso },
+      // counseling: { counseling },
+      // dixcorso: { dixcorso },
       eventi: { eventi },
     },
   },
@@ -29,9 +29,23 @@ const prezzi = ({
         <article className="prezzi body">
           <div className="center-grid">
             <h2>PRONTI PER IL CAMBIAMENTO?</h2>
-            <h2>PRENOTA ADESSO</h2>
+            <div className="form-prezzi">
+              <form>
+                <a
+                  href="https://ilariaserena.setmore.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <input
+                    type="button"
+                    value="Prenota Adesso una seduta"
+                    style={{ margin: 0, backgroundColor: "var(--medio3)" }}
+                  />
+                </a>
+              </form>
+            </div>
           </div>
-          <FormPrezzi />
+
           <h2
             style={{
               margin: "5rem",
@@ -59,7 +73,7 @@ const prezzi = ({
             link="/la-terapia-del-diapason"
             descLink="scopri di piú"
           />
-          <Prezzo titolo="counseling" desc={counseling} />
+          {/* <Prezzo titolo="counseling" desc={counseling} /> */}
           <Prezzo
             titolo="meditazioni"
             id="med"
@@ -68,6 +82,8 @@ const prezzi = ({
             descLink="Vai ai Sample"
           />
           <Prezzo titolo="eventi" desc={eventi} />
+          <h2>RICHIEDI INFORMAZIONI</h2>
+          <FormPrezzi />
         </article>
       </Layout>
     </>

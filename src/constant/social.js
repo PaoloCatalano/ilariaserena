@@ -11,7 +11,7 @@ export const socials = [
   {
     id: 1,
     text: `${email}`,
-    url: `<mailto:$>email</mailto:$>`,
+    url: `mailto:${email}`,
     icon: <FiMail className="icon" />,
   },
   {

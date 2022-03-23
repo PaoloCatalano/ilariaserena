@@ -51,7 +51,7 @@ const FormPrezzi = () => {
             <option value="thetaHealing">ThetaHealing</option>
             {/* <option value="dixcorso">Dixcorso</option> */}
             <option value="Sonic Therapy">Sonic Therapy</option>
-            <option value="counseling">Counseling</option>
+            {/* <option value="counseling">Counseling</option> */}
             <option value="Meditations">Meditations</option>
             <option value="Events">Events</option>
           </select>
@@ -77,7 +77,7 @@ const FormPrezzi = () => {
         <input
           disabled={state.submitting}
           type="submit"
-          value="Book Now"
+          value="Send"
           style={{ margin: 0 }}
         />
         <ValidationError errors={state.errors} />

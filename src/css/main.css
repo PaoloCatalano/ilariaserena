@@ -1276,9 +1276,10 @@ form select {
 }
 
 .markdown p {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
+  display: grid;
+  place-items: center;
+  grid: 2fr auto/ 1fr;
 }
 .markdown p:last-child {
   width: 100%;
@@ -1288,6 +1289,13 @@ form select {
   display: flex;
   place-items: center;
   flex-wrap: wrap;
+  flex-direction: column;
+  flex-direction: column;
+  word-break: break-all;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .markdown a img {
@@ -1308,8 +1316,8 @@ form select {
   border-top: solid 1px var(--grigio-medio);
 }
 .news-contenuto img {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
 }
 @media screen and (max-width: 570px) {
   .news-contenuto img {
