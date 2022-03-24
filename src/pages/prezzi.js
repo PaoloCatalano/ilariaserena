@@ -38,7 +38,7 @@ const prezzi = ({
                 >
                   <input
                     type="button"
-                    value="Prenota Adesso una seduta"
+                    value="PRENOTA ADESSO"
                     style={{ margin: 0, backgroundColor: "var(--medio3)" }}
                   />
                 </a>
