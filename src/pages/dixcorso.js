@@ -70,14 +70,14 @@ Mi chiamo Discorso, per gli amici Dix.. Mi hanno definito uno speciale…”la n
                 <strong ref={zen} className="blue zen">
                   ZEN
                 </strong>{" "}
-                <span style={{ color: "white" }}>ZEN</span> significa
+                <span className="hidden-text">ZEN</span> significa
                 riflessione, pensiero. E in effetti... mi piace. Io, sono un
                 mega pensiero... unisco menti affini... ma amo la scienza e mi
                 voglio definire come &nbsp;
                 <strong className="blue catalizzatore" ref={cat}>
                   catalizzatore
                 </strong>{" "}
-                <span style={{ color: "white" }}>catalizzatore</span>
+                <span className="hidden-text">catalizzatore</span>
                 ... suona importante e poi significa, tra l’altro, il
                 catalizzatore, provoca un aumento della velocità di una
                 reazione, senza apparentemente prendervi parte e senza

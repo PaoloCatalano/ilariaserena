@@ -105,7 +105,7 @@ const ThetaHealing = () => {
           <div className="circle3 title center-grid">
             <h2 className="">The brain waves</h2>
           </div>
-          <div className="col-2 center-grid padding1  padding-center">
+          <div className="col-2 center-grid padding1 padding-center col-special-pic-1">
             <div>
               <p style={{ marginBottom: "4rem" }}>
                 At the roots of all our thoughts, emotions and behaviors there

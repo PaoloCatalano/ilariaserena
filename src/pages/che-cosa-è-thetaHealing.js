@@ -105,7 +105,7 @@ const ThetaHealing = () => {
           <div className="circle3 title center-grid">
             <h2 className=""> Stato Theta e altre onde cerebrali</h2>
           </div>
-          <div className="col-2 center-grid padding1 padding-center">
+          <div className="col-2 center-grid padding1 padding-center col-special-pic-1">
             <div>
               <p>
                 L’attività cerebrale consiste in un massiccio scambio di

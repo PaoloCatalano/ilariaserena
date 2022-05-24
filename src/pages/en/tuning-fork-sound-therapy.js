@@ -1,21 +1,72 @@
 import React from "react"
 import Layout from "../../components/Layout"
 import SEO from "../../components/Seo"
+import Symbol from "../../components/Symbol"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import sitemap from "../../constant/sitemap"
-import Symbol from "../../components/Symbol"
-
-import PiumaLogo from "../../components/PiumaLogo"
 
 const Tuning_Fork = () => {
   const allPics = useStaticQuery(graphql`
     {
-      pics: allContentfulPictures(
+      diapason1: allContentfulPictures(
         filter: { picture: { title: { eq: "diapason1" } } }
       ) {
         nodes {
           picture {
+            title
+            fluid {
+              ...GatsbyContentfulFluid_noBase64
+            }
+          }
+        }
+      }
+
+      Day_Tuning_Fork: allContentfulPictures(
+        filter: { picture: { title: { eq: "Day Tuning Fork" } } }
+      ) {
+        nodes {
+          picture {
+            title
+            fluid {
+              ...GatsbyContentfulFluid_noBase64
+            }
+          }
+        }
+      }
+
+      Moon_Tuning_Fork: allContentfulPictures(
+        filter: { picture: { title: { eq: "Moon Tuning Fork" } } }
+      ) {
+        nodes {
+          picture {
+            title
+            fluid {
+              ...GatsbyContentfulFluid_noBase64
+            }
+          }
+        }
+      }
+
+      Earth_Tuning_Fork: allContentfulPictures(
+        filter: { picture: { title: { eq: "Earth Tuning Fork" } } }
+      ) {
+        nodes {
+          picture {
+            title
+            fluid {
+              ...GatsbyContentfulFluid_noBase64
+            }
+          }
+        }
+      }
+
+      Treatment_Room: allContentfulPictures(
+        filter: { picture: { title: { eq: "Treatment Room" } } }
+      ) {
+        nodes {
+          picture {
+            title
             fluid {
               ...GatsbyContentfulFluid_noBase64
             }
@@ -80,7 +131,20 @@ const Tuning_Fork = () => {
               </p>
             </div>
             <div className="center-grid">
-              <PiumaLogo />
+              <div className="frame-img" style={{ height: 345, width: 345 }}>
+                <Img
+                  style={{
+                    height: "auto",
+                    width: 345,
+                    margin: "10px 0 0 10px",
+                  }}
+                  className="img"
+                  fluid={allPics.Day_Tuning_Fork.nodes[0].picture.fluid}
+                  alt={`Ilaria Serena diapason soundtherapy ${allPics.Day_Tuning_Fork.nodes[0].picture.title}`}
+                  fadeIn={true}
+                  backgroundColor="white"
+                />
+              </div>
             </div>
           </div>
           <div className="col-2 center-grid">
@@ -92,8 +156,8 @@ const Tuning_Fork = () => {
                   margin: "10px 0 0 10px",
                 }}
                 className="img"
-                fluid={allPics.pics.nodes[0].picture.fluid}
-                alt="Ilaria Serena tuning fork soundtherapy"
+                fluid={allPics.diapason1.nodes[0].picture.fluid}
+                alt={`Ilaria Serena diapason soundtherapy ${allPics.diapason1.nodes[0].picture.title}`}
                 fadeIn={true}
                 backgroundColor="white"
               />
@@ -139,6 +203,49 @@ const Tuning_Fork = () => {
           <div className="crazy1 title center-grid">
             <h2>Info and prices for a Tuning Fork Session</h2>
           </div>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "2rem",
+              justifyContent: "space-evenly",
+            }}
+          >
+            <div
+              className="frame-img"
+              style={{ height: 345, width: 345, margin: "3rem " }}
+            >
+              <Img
+                style={{
+                  height: "auto",
+                  width: 345,
+                  margin: "10px 0 0 10px",
+                }}
+                className="img"
+                fluid={allPics.Earth_Tuning_Fork.nodes[0].picture.fluid}
+                alt={`Ilaria Serena diapason soundtherapy ${allPics.Earth_Tuning_Fork.nodes[0].picture.title}`}
+                fadeIn={true}
+                backgroundColor="white"
+              />
+            </div>
+            <div
+              className="frame-img"
+              style={{ height: 345, width: 345, margin: "3rem " }}
+            >
+              <Img
+                style={{
+                  height: "auto",
+                  width: 345,
+                  margin: "10px 0 0 10px",
+                }}
+                className="img"
+                fluid={allPics.Moon_Tuning_Fork.nodes[0].picture.fluid}
+                alt={`Ilaria Serena diapason soundtherapy ${allPics.Moon_Tuning_Fork.nodes[0].picture.title}`}
+                fadeIn={true}
+                backgroundColor="white"
+              />
+            </div>
+          </div>
           <div className="padding1 padding-center">
             <p>
               A session lasts about 35/40 minutes. The number of sessions needed
@@ -160,6 +267,18 @@ const Tuning_Fork = () => {
               </p>
             </div>
           </div>
+          <Img
+            style={{
+              height: "auto",
+              maxWidth: 690,
+              margin: "auto",
+            }}
+            className="img"
+            fluid={allPics.Treatment_Room.nodes[0].picture.fluid}
+            alt={`Ilaria Serena diapason soundtherapy ${allPics.Treatment_Room.nodes[0].picture.title}`}
+            fadeIn={true}
+            backgroundColor="white"
+          />
         </article>
       </Layout>
     </>

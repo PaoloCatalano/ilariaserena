@@ -16,7 +16,6 @@ const Newsletters = ({ en }) => {
         acceptCharset="utf-8"
         action="https://formspree.io/f/mbjpwgrz"
         method="post"
-        
       >
         <fieldset id="fs-frm-inputs">
           <input
@@ -33,7 +32,7 @@ const Newsletters = ({ en }) => {
             value="Contact Form Submission"
           />
         </fieldset>
-        <input type="submit" value={en ? "Submit" : "Invia"} />
+        <input type="submit" value={en ? "Send" : "Invia"} />
       </form>
     </div>
   )

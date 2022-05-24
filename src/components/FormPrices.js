@@ -46,7 +46,7 @@ const FormPrezzi = () => {
         <ValidationError field="email" prefix="Email" errors={state.errors} />
         <fieldset id="fs-frm-selects">
           <label htmlFor="service">Choose the service</label>
-          <select name="service" id="service" required>
+          <select name="service" id="service">
             <option defaultValue="" aria-label="empty"></option>
             <option value="thetaHealing">ThetaHealing</option>
             {/* <option value="dixcorso">Dixcorso</option> */}
@@ -63,10 +63,11 @@ const FormPrezzi = () => {
         </fieldset>
         <label htmlFor="message">More Details</label>
         <textarea
+          required
           rows="3"
           name="message"
           id="message"
-          placeholder="Aenean lacinia bibendum nulla sed consectetur."
+          placeholder="Write all the questions you want to ask me."
         ></textarea>
         <input
           type="hidden"

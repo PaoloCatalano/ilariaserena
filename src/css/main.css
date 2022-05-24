@@ -1425,6 +1425,14 @@ effetti
   transform: translateY(0%) rotate(0deg);
   z-index: 99;
 }
+.hidden-text {
+  color: white !important;
+}
+
+.hidden-text::selection {
+  color: var(--azure);
+  background: #bffdfa; /* var(--azure) with a 1% of opacity*/
+}
 
 .giu {
   transform: translateY(8500%) rotate(90deg);
@@ -1443,4 +1451,15 @@ effetti
 .mega {
   font-weight: normal !important;
   color: var(--grigio) !important;
+}
+
+/* SPACIAL */
+@media screen and (max-width: 900px) {
+  .col-special-pic-1 {
+    grid: 1fr auto/1fr;
+  }
+  .col-special-pic-2 {
+    margin-top: 10rem;
+    grid: auto 1fr/1fr;
+  }
 }
