@@ -100,7 +100,7 @@ const Tuning_Fork = () => {
             symbol="ottagono1"
             title="Restore health, harmony and interior balance."
           />
-          <div className="col-2 center-grid">
+          <div className="col-2 center-grid col-special-pic-1">
             <div className="padding1 padding-left">
               <p>
                 Tuning forks are tools used to produce persistent, simple and
@@ -147,7 +147,7 @@ const Tuning_Fork = () => {
               </div>
             </div>
           </div>
-          <div className="col-2 center-grid">
+          <div className="col-2 center-grid col-special-pic-2">
             <div className="frame-img" style={{ height: 459, width: 345 }}>
               <Img
                 style={{
